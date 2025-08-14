@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar with glassmorphism and animated underline */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #1da1f2; /* X theme blue */
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #1da1f2;
+    transform: scale(1.1);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.banner {
+    margin-top: 70px; /* space for fixed navbar */
+    text-align: center;
+}
+
+.banner .logo {
+    border-radius: 50%;
+    max-width: 80px;
+    height: auto;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about{
+    padding: 10px;
+    text-align: justify;
+}
+
+.past-works, .testimonials, .contact {
+    padding: 10px;
+    text-align: center;
+}
+
+.buttons button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #0d8ddb;
+    transform: scale(1.05);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#image-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#image-viewer.hidden {
+    display: none;
+}
+
+#full-image {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    font-style: italic;
+    position: relative;
+}
+
+.name-box {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    background: #1da1f2;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #1da1f2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0d8ddb;
+}
+
+
+/* Font Awesome icon styling for social links */
+.contact-section a i {
+    color: #1DA1F2;
+    margin-right: 8px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-section a:hover i {
+    transform: scale(1.2);
+    color: #0d8ddb;
+}
